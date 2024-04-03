@@ -20,4 +20,5 @@ This project implements the following metaheuristic algorithms to solve the 4-Qu
 
 ## Dependencies
 - Python 3
-
+### Genetic Algorithm
+![image](https://github.com/armawwnn/4-Queens-Problem/assets/55153680/4de848b2-e7ec-4eaa-8ff1-a33bc0abfcce)
