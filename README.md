@@ -9,6 +9,7 @@ The 4-Queen problem involves placing 4 queens on a 4x4 chessboard such that no t
 
 ## Approach
 This project implements the following metaheuristic algorithms to solve the 4-Queen problem:
+- Hill Climbing Algorithm
 - Genetic Algorithm
 - Simulated Annealing
 
