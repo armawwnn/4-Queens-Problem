@@ -15,10 +15,10 @@ def count_threats(queens):
 y_val = [] 
 x_val = []
 count=0
-for i in range(1, 5):
-    for j in range(1, 5):  
-        for k in range(1, 5):  
-            for l in range(1, 5):  
+for i in range(0, 4):
+    for j in range(0, 4):  
+        for k in range(0, 4):  
+            for l in range(0, 4):  
                 queens = [i,j,k,l]
                 count = count+1
                 x_val.append(count)

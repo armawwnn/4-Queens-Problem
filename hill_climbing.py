@@ -1,3 +1,17 @@
+
+
+def count_threats(queens):
+    threats = 0
+    n = len(queens)
+    
+    for i in range(n):
+        for j in range(i + 1, n):
+            if queens[i] == queens[j] or abs(queens[i] - queens[j]) == abs(i - j):
+                threats += 1
+                
+    return threats
+
+
 def decimal_to_base_4(number):
     base_4_digits = []
     while number > 0:
@@ -34,7 +48,6 @@ def successor(arr):
     next_state.append(decimal_to_base_4(dec))
     return next_state
 
-
-print(successor([1,0,0,0]))
-
-
+start_state = [3,3,0,1]
+neigohbor = successor(start_state)
+print(neigohbor)
