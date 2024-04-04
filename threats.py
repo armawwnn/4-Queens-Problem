@@ -1,16 +1,7 @@
 import matplotlib.pyplot as plt
+from functions import count_threats
 
 
-def count_threats(queens):
-    threats = 0
-    n = len(queens)
-    
-    for i in range(n):
-        for j in range(i + 1, n):
-            if queens[i] == queens[j] or abs(queens[i] - queens[j]) == abs(i - j):
-                threats += 1
-                
-    return threats
 
 y_val = [] 
 x_val = []
