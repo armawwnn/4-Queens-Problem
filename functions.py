@@ -36,3 +36,7 @@ def generate_neighbors(board):
                 neighbors.append(neighbor)
     return neighbors
 
+
+
+
+

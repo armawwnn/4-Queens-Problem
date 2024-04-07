@@ -27,3 +27,5 @@ This project implements the following metaheuristic algorithms to solve the 4-Qu
 The Hill Climbing algorithm attempts to maximize a heuristic function by making incremental changes to the current state. However, it has some limitations:
 - **Local Maxima/Minima**: Hill Climbing can get stuck in local maxima or minima, preventing it from reaching the global optimum solution.
 - **Plateaus**: In case of plateaus where multiple neighboring states have the same heuristic value, Hill Climbing may struggle to make progress.
+
+Steepest Ascent Hill Climbing has a probability of around 40% to find the global optimum in the 4-Queen problem. However, with the First Choice Hill Climbing algorithm, this probability decreases to approximately 30% for finding the global optimum.
