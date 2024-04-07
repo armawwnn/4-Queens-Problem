@@ -1,26 +1,27 @@
-from functions import successor,count_threats
+from functions import *
 
+def hill_climbing(start):
+    current_board = start
+    current_attacks = calculate_attacks(current_board)
 
-
-start_state = [1,3,1,1]
-neigohbor = successor(start_state)
-
-def climbing(start):
-    start_node = start
     while True:
-        nei = successor(start_node)
-        if count_threats(nei[0]) <= count_threats(nei[1]) and count_threats(nei[0]) < count_threats(start_node):
-            start_node = nei[0]
-            print(start_node)
-         
-        if count_threats(nei[1]) <= count_threats(nei[0]) and count_threats(nei[1]) < count_threats(start_node):
-            start_node =  nei[1]
-            print(start_node)
+        neighbors = generate_neighbors(current_board)
+        next_board = None
+        min_attacks = current_attacks
 
+        for neighbor in neighbors:
+            new_attacks = calculate_attacks(neighbor)
+            if new_attacks < min_attacks:
+                min_attacks = new_attacks
+                next_board = neighbor
+
+        if next_board is None:
+            return current_board
         else:
-            return start_node
+            current_board = next_board
+            current_attacks = min_attacks
 
-resault = climbing(start_state)
-num = count_threats(resault)
-print("resault : ")
-print(resault,num)
+
+solution = hill_climbing([1,3,1,0])
+print(solution)
+
