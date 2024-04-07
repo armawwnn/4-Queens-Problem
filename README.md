@@ -24,3 +24,6 @@ This project implements the following metaheuristic algorithms to solve the 4-Qu
 ## Algorithms
 ### Hill Climbing
 ![image](https://github.com/armawwnn/4-Queens-Problem/assets/55153680/4de848b2-e7ec-4eaa-8ff1-a33bc0abfcce)
+The Hill Climbing algorithm attempts to maximize a heuristic function by making incremental changes to the current state. However, it has some limitations:
+- **Local Maxima/Minima**: Hill Climbing can get stuck in local maxima or minima, preventing it from reaching the global optimum solution.
+- **Plateaus**: In case of plateaus where multiple neighboring states have the same heuristic value, Hill Climbing may struggle to make progress.
