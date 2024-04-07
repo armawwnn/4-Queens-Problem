@@ -1,5 +1,22 @@
 import random
 
+def localORglobal(state):
+    if calculate_attacks(state) == 0:
+        print("global optimum")
+    else:
+        print("local optimum")
+
+def min_element(arr):
+    if len(arr) == 0:
+        return None
+    min_val = arr[0]
+    for i in range(1, len(arr)):
+        if arr[i] < min_val:
+            min_val = arr[i]
+    return min_val
+
+
+
 def count_threats(queens):
     threats = 0
     n = len(queens)
