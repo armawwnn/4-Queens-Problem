@@ -1,10 +1,10 @@
 import random
 
 def localORglobal(state):
-    if calculate_attacks(state) == 0:
-        print("global optimum")
+    if int(calculate_attacks(state)) == 0:
+        return True
     else:
-        print("local optimum")
+        return False
 
 def min_element(arr):
     if len(arr) == 0:
