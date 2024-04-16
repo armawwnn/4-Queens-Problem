@@ -1,4 +1,3 @@
-
 # 4-Queen Problem Solver with Metaheuristic Algorithms
 
 ## Introduction
@@ -50,3 +49,7 @@ The Hill Climbing algorithm attempts to maximize a heuristic function by making 
    - While this approach can lead to better solutions compared to other variants, it can be computationally expensive, especially in high-dimensional search spaces.
 
 Steepest Ascent Hill Climbing has a probability of around 40% to find the global optimum in the 4-Queen problem. However, with the First Choice Hill Climbing algorithm, this probability decreases to approximately 30% for finding the global optimum.
+
+### simulated annealing
+
+
