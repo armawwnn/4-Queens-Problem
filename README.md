@@ -28,4 +28,25 @@ The Hill Climbing algorithm attempts to maximize a heuristic function by making 
 - **Local Maxima/Minima**: Hill Climbing can get stuck in local maxima or minima, preventing it from reaching the global optimum solution.
 - **Plateaus**: In case of plateaus where multiple neighboring states have the same heuristic value, Hill Climbing may struggle to make progress.
 
+#### Variants of Hill Climbing:
+1. **Hill Climbing Random Restart:**
+   - This variant of Hill Climbing involves randomly restarting the search from different initial points.
+   - It aims to overcome local optima by allowing the algorithm to explore multiple regions of the search space.
+   - It repeats the Hill Climbing process from different starting points until a satisfactory solution is found or a maximum number of iterations is reached.
+
+2. **Hill Climbing Stochastic:**
+   - Stochastic Hill Climbing introduces randomness in the selection of the next move.
+   - Instead of always selecting the best neighbor, it randomly selects a neighbor and evaluates whether it improves the current solution.
+   - This randomness can help escape local optima and explore a broader area of the search space.
+
+3. **Hill Climbing First Choice:**
+   - First Choice Hill Climbing improves efficiency by only considering the first neighbor that improves the current solution.
+   - It avoids exhaustive evaluation of all neighbors, making it computationally faster.
+   - However, it might not always lead to the best solution since it settles for the first improving move it encounters.
+
+4. **Hill Climbing Steepest Ascent:**
+   - Steepest Ascent Hill Climbing always selects the neighbor that provides the highest improvement in the objective function.
+   - It exhaustively evaluates all neighbors to find the steepest ascent direction.
+   - While this approach can lead to better solutions compared to other variants, it can be computationally expensive, especially in high-dimensional search spaces.
+
 Steepest Ascent Hill Climbing has a probability of around 40% to find the global optimum in the 4-Queen problem. However, with the First Choice Hill Climbing algorithm, this probability decreases to approximately 30% for finding the global optimum.

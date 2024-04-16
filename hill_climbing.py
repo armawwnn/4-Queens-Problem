@@ -1,7 +1,27 @@
 from functions import *
 import random
 
-def hill_climbing_random_restart(start):
+def hill_climbing_random_restart(start,num):
+    resault , steps = hill_climbing_first_choice(start)
+    count = 0
+    resaults_arr = []
+    score_arr = []
+    while count<num:
+        count = count+1
+        resault , steps = hill_climbing_first_choice(generate_board())
+        resaults_arr.append(resault)
+        score_arr.append(count_threats(resault))
+    min_value = min(score_arr)
+    min_value_index = score_arr.index(min_value)
+    return resaults_arr[min_value_index]
+
+
+
+
+
+
+
+def hill_climbing_random_restart_many_time(start):
     resault , steps = hill_climbing_first_choice(start)
     while True: 
         if localORglobal(resault):
