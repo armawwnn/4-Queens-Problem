@@ -52,4 +52,5 @@ Steepest Ascent Hill Climbing has a probability of around 40% to find the global
 
 ### simulated annealing
 
+![image](https://github.com/armawwnn/4-Queens-Problem/assets/55153680/dc6b715a-555a-4ea7-a9b1-3159523e83c6)
 
