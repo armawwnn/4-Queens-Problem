@@ -30,7 +30,10 @@ class NQueensState:
         if not isinstance(other, NQueensState): return False
     
         return self.conflicts() >= other.conflicts()        
-        
+
+
+
+
     def conflicts(self):
 
         if self.num_conflicts is None:
@@ -86,14 +89,12 @@ class NQueensState:
         border = plt.Rectangle((0, 0), N, N, ec=fc, fc='w', alpha=0.35)
         ax.add_patch(border)
 
-        # draw chess board
         for i in range(N):
             for j in range(N):
                 alpha = 0.35 if (i + j) % 2 == 0 else 0.1
                 cell = plt.Rectangle((i, j), 1, 1, fc=fc, alpha=alpha)
                 ax.add_patch(cell)
 
-        # show conflicts
         if show_conflicts:
             for i in range(N - 1):
                 row_i = self.queens[i]
@@ -105,7 +106,6 @@ class NQueensState:
                         line = plt.Line2D((x1, x2), (y1, y2), lw=3, ls='-', color='orchid', alpha=0.6)
                         ax.add_line(line)
 
-        # place queens on chess board
         for col, row in enumerate(self.queens):
             # c = 'k' if (col + row) % 2 == 0 else 'w'
             x = col + 0.5
