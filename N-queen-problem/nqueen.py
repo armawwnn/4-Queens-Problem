@@ -117,6 +117,10 @@ class NQueensState:
         ax.axis('off')
         ax.set_title("Conflicts = {}".format(self.conflicts()), fontsize=18)
         plt.show()    
+
+    def get_queens(self):
+
+        return self.queens
         
     def __str__(self):
         return f'{self.queens} <{self.conflicts()}>'

@@ -2,5 +2,7 @@
 env/
 test.py
 .gitignore
+test*
+gen*
 
 __pycache__/
